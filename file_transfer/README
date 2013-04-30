@@ -1,0 +1,12 @@
+
+# To get data out of the database, you should
+python manage.py dumpdata app > datafile 
+eg. 
+    python manage.py dumpdata rankProj > rankProj.json
+
+# To get .json file into the database
+python manage.py loaddata datafile
+eg.
+    python manage.py loaddata rankProj.json
+
+
