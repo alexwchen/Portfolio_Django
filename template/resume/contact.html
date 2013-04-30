@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<link rel='stylesheet' type='text/css' href='media/JQ_Css/smoothness/jquery-ui-1.8.16.custom.css'>
+		<link rel="stylesheet" type="text/css" href="media/contact_style.css" />
+		{% include "rankProj/top_display.html" %}
+	</head>
+	<body>
+		<div id ='portfolio_main_container' class='div_contact_main_container'>
+			<div id='portfolio_tabs_bar'>
+				<ul>
+					<li><a href = "#CONT">CONTACT</a></li>		
+				</ul>
+
+				<div id="CONT">
+					<div id='middle_main' class='div_middle_main'>						
+						<div id ='picture_big_frame' class='div_picture_big_frame'>							
+							{% for picture in Images %}
+								<div id='picture' class='div_picture_small_frame'>
+									<a href = '/portfolio/{{ picture.link }}'>
+										<img width='100' height='100' src='media{{ picture.image_name }}'>
+									</a>
+								</div>
+							{% endfor %}
+						</div>
+						
+						<div id ='basic_big_frame' class='div_basic_big_frame'>
+							<div id ='basic_title_frame' class='div_basic_title_frame'>
+								<p class = 'font_basic_title'> {{ Contact.title_contact }}</p>
+							</div>
+							<div id = 'basic_info_desc_frame' class='div_basic_info_desc_frame'>
+								<p class = 'font_basic_info_desc'>{{ Contact.email}}</p>
+							</div>							
+						</div>
+						
+						<div id='blank_divider' class='div_blank_divider'></div>
+						
+						<div id ='basic_big_frame' class='div_basic_big_frame'>
+							<div id ='basic_title_frame' class='div_basic_title_frame'>
+								<p class = 'font_basic_title'>{{ Contact.title_research }}</p>
+							</div>
+							<div id = 'basic_info_desc_frame' class='div_basic_info_desc_frame'>
+								<p class = 'font_basic_research_desc'>{{ Contact.research_interest }}</p>
+							</div>							
+						</div>
+						
+					</div>
+				</div>
+
+
+			</div>			
+		</div>
+		<script type='text/javascript' src="media/JQ_Lib/jquery.js"></script>
+		<script type='text/javascript' src="media/JQ_Lib/jquery-ui.js"></script>
+		<script type="text/javascript" src="media/contact_script.js"></script>
+		<script type='text/javascript' src="media/time_tracker_script.js"></script>
+	</body>
+	{% include "rankProj/footer.html" %}				
+	
+</html>

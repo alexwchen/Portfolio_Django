@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<link rel='stylesheet' type='text/css' href='media/JQ_Css/smoothness/jquery-ui-1.8.16.custom.css'>
+		<link rel='stylesheet' type='text/css' href='media/publication_rank.css'>
+		{% include "rankProj/top_display.html" %}
+	</head>
+	<body>
+		<div id ='portfolio_main_container' class='div_portfolio_main_container'>
+			<div id='portfolio_tabs_bar'>
+				<ul>
+					<li><a href = "#PUB">PUBLICATIONS</a></li>		
+				</ul>
+
+				<div id="PUB">
+					
+					<div id = "portfolio_filter_main_container" class='div_portfolio_filter_main_container'>
+						<div id = 'select_drapdown_container' class = 'div_select_drapdown_container'>
+							<select style='font-size: 0.8em;' name='select_category'>
+								<option value='1'>2011</option>
+							</select>
+						</div>
+					</div>
+					
+					<div id = "portfolio_tabs_frame" class='div_portfolio_tabs_frame'>
+						{% for pub in publications %}
+							<div id = 'portfolio_rank_frame' class='div_portfolio_rank_frame'>
+								<div id = 'portfolio_pub_color_rank_frame' class='div_portfolio_pub_color_rank_frame' onclick=location.href='{{ pub.link }}'>
+								
+									{# rank number display #}
+									<div id = 'portfolio_pub_rank_number' class='div_portfolio_pub_rank_number'>
+										<p>{{ forloop.counter }}</p>
+									</div>
+									<p class = 'font_middle_portfolio_publication_title'><b>{{ pub.title }}</b></p>
+									<p class = 'font_middle_portfolio_publication_description'>{{ pub.authors }}</p>
+								</div>
+							</div>	
+						{% endfor %}
+					</div>
+				</div>
+			</div>			
+		</div>
+		<script type='text/javascript' src="media/JQ_Lib/jquery.js"></script>
+		<script type='text/javascript' src="media/JQ_Lib/jquery-ui.js"></script>
+		<script type='text/javascript' src="media/time_tracker_script.js"></script>
+		<script type='text/javascript' src="media/publication_rank.js"></script>
+	</body>
+	{% include "rankProj/footer.html" %}
+</html>

@@ -1,0 +1,112 @@
+<html>
+	<!-- CSS Starts Here-->
+	<head>
+		<link rel="stylesheet" type="text/css" href="media/top_display.css" />
+		<link rel="shortcut icon" href="media/Images/Head_Pic.ico" />
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-33818907-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+	</head>
+	
+	<!-- Webpage Rendering Starts Here-->
+	<body class = 'body'>
+		<div id='main_div_container' class = 'div_main_container'>
+			
+			
+			<!-- Top Container Starts Here-->
+			<div id='main_div_top_container' class = 'div_top_container'>
+				
+				<!-- Top up Starts Here-->
+				<div id='top_up' class = 'div_top_up'>
+					<div id ='top_up_deco_block' class = 'div_top_up_deco_block'>
+					</div>
+				</div>
+
+				<!-- Top middle Starts Here-->
+				<div id='top_middle' class = 'div_top_middle'>
+
+					<div id ='top_middle_left' class = 'div_top_middle_left'>
+						<img width='100' height='100' src='media/Images/Head_Pic.jpg' alt='media/Images/Head_Pic.jpg'>
+					</div>
+
+					<div id ='top_middle_right_blank' class = 'div_top_middle_right_blank'></div>
+					
+					<div id ='top_middle_right_up' class = 'div_top_middle_right_up'>
+						<p class = 'font_name'> Alexander Chen </p>
+					</div>
+					
+					<div id ='top_middle_right_down' class = 'div_top_middle_right_down'>
+						<font color="#3279BB" class = 'font_job_and_title'> Computer Engineering / University of Toronto </font>
+					</div>
+					
+					<div id ='top_middle_right_blank' class = 'div_top_middle_right_blank'></div>
+					
+					
+				</div>
+				{% load rankProj_extras %}
+				<!-- Top bottom Starts Here-->
+				<div id='top_bottom' class = 'div_top_bottom'>
+					<ul class = 'top_ul'>
+					{% if FullPath|pathfilt == 'portfolio' %}
+						<li class = 'top_li'><a class = 'a_top_menu_link' href ="/contact/"> CONTACT </a></li>
+						<li class = 'top_li'><p class = 'font_menu'>&nbsp / &nbsp</p></li>
+						<li class = 'top_li'><a class = 'a_top_menu_link' href ="/publication/"> PUBLICATIONS </a></li>
+						<li class = 'top_li'><p class = 'font_menu'>&nbsp / &nbsp</p></li>	
+						<li class = 'top_li'><a class = 'a_top_menu_selected_link' href ="/portfolio/"> PORTFOLIO </a></li>
+						<li class = 'top_li'><p class = 'font_menu'>&nbsp / &nbsp</p></li>
+						<li class = 'top_li'><a class = 'a_top_menu_link' href ="/resume/"> RESUME </a></li>
+					{% else %}{% if FullPath|pathfilt == 'resume' %}
+							<li class = 'top_li'><a class = 'a_top_menu_link' href ="/contact/"> CONTACT </a></li>
+							<li class = 'top_li'><p class = 'font_menu'>&nbsp / &nbsp</p></li>
+							<li class = 'top_li'><a class = 'a_top_menu_link' href ="/publication/"> PUBLICATIONS </a></li>
+							<li class = 'top_li'><p class = 'font_menu'>&nbsp / &nbsp</p></li>	
+							<li class = 'top_li'><a class = 'a_top_menu_link' href ="/portfolio/"> PORTFOLIO </a></li>
+							<li class = 'top_li'><p class = 'font_menu'>&nbsp / &nbsp</p></li>
+							<li class = 'top_li'><a class = 'a_top_menu_selected_link' href ="/resume/"> RESUME </a></li>
+					{% else %}{% if FullPath|pathfilt == 'contact' %}
+							<li class = 'top_li'><a class = 'a_top_menu_selected_link' href ="/contact/"> CONTACT </a></li>
+							<li class = 'top_li'><p class = 'font_menu'>&nbsp / &nbsp</p></li>
+							<li class = 'top_li'><a class = 'a_top_menu_link' href ="/publication/"> PUBLICATIONS </a></li>
+							<li class = 'top_li'><p class = 'font_menu'>&nbsp / &nbsp</p></li>	
+							<li class = 'top_li'><a class = 'a_top_menu_link' href ="/portfolio/"> PORTFOLIO </a></li>
+							<li class = 'top_li'><p class = 'font_menu'>&nbsp / &nbsp</p></li>
+							<li class = 'top_li'><a class = 'a_top_menu_link' href ="/resume/"> RESUME </a></li>
+					{% else %}{% if FullPath|pathfilt == 'publication' %}
+							<li class = 'top_li'><a class = 'a_top_menu_link' href ="/contact/"> CONTACT </a></li>
+							<li class = 'top_li'><p class = 'font_menu'>&nbsp / &nbsp</p></li>
+							<li class = 'top_li'><a class = 'a_top_menu_selected_link' href ="/publication/"> PUBLICATIONS </a></li>
+							<li class = 'top_li'><p class = 'font_menu'>&nbsp / &nbsp</p></li>	
+							<li class = 'top_li'><a class = 'a_top_menu_link' href ="/portfolio/"> PORTFOLIO </a></li>
+							<li class = 'top_li'><p class = 'font_menu'>&nbsp / &nbsp</p></li>
+							<li class = 'top_li'><a class = 'a_top_menu_link' href ="/resume/"> RESUME </a></li>
+					{% else %}
+							<li class = 'top_li'><a class = 'a_top_menu_link' href ="/contact/"> CONTACT </a></li>
+							<li class = 'top_li'><p class = 'font_menu'>&nbsp / &nbsp</p></li>
+							<li class = 'top_li'><a class = 'a_top_menu_link' href ="/publication/"> PUBLICATIONS </a></li>
+							<li class = 'top_li'><p class = 'font_menu'>&nbsp / &nbsp</p></li>	
+							<li class = 'top_li'><a class = 'a_top_menu_selected_link' href ="/portfolio/"> PORTFOLIO </a></li>
+							<li class = 'top_li'><p class = 'font_menu'>&nbsp / &nbsp</p></li>
+							<li class = 'top_li'><a class = 'a_top_menu_link' href ="/resume/"> RESUME </a></li>
+					{% endif %}{% endif %}{% endif %}{% endif %}
+					
+					
+					</ul>					
+				</div>
+			</div>
+
+			<div id = 'divider_top_middle' class='div_divider_top_middle'></div>
+		</div>
+	</body>
+	
+	
+</html>

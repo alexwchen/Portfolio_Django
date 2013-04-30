@@ -1,0 +1,138 @@
+<html>
+	<head>
+		{% include "rankProj/top_display.html" %}
+		<link rel='stylesheet' type='text/css' href='media/JQ_Css/smoothness/jquery-ui-1.8.16.custom.css'>
+		<link rel="stylesheet" type="text/css" href="media/resume_display_style.css" />
+	</head>
+	
+	<body>
+		<div id='middle_body' class = 'middle_body'>
+			<div id='portfolio_tabs_bar'>
+				<ul>
+					<li><a href = "#RES">RESUME</a></li>		
+				</ul>
+
+				{# Middle Container Starts Here #}
+				<div id = 'middle_container' class = 'div_middle_container'>
+
+					{# Education #}
+					<div id = 'middle_title_container' class = 'div_middle_title_container' >
+						<div id = 'middle_title' class = 'div_middle_title'>
+							<p class = 'font_middle_title'> EDUCATION </p>
+						</div>					
+					</div>
+
+					{# Education Content #}
+					{% for Edu in Education %}
+					<div id = 'middle_content_container' class = 'div_middle_content_container' value='5'>
+						<div id = 'middle_content_container_left' class = 'div_middle_content_container_left'>					
+							<b><p class = 'font_edu_left_title'> {{ Edu.degree }}</p></b>
+							<p class = 'font_edu_left_program'>  {{ Edu.program }}</p>
+						</div>
+						<div id = 'middle_content_container_right' class = 'div_middle_content_container_right'>					
+							<p class = 'font_middle_content_right'> {{ Edu.duration }} </p>
+						</div>
+					</div>					
+
+					{# Designed For Featured Course Detail #}
+					<div id = 'education_detail' class = 'div_education_detail' style="display: <?php echo $Edu_Display_Status; ?>">
+						{# Designed For Featured Course Detail - Not Used Right Now#}
+					</div>
+					{% endfor %}
+					
+					{# Technical Experience #}
+					<div id = 'middle_title_container' class = 'div_middle_title_container'>
+						<div id = 'middle_title' class = 'div_middle_title'>
+							<p class = 'font_middle_title'> TECHNICAL EXPERIENCE </p>
+						</div>
+						<div id = 'middle_tech_job_title' class = 'div_hide_all_option'>
+							<a id="tech_middle_tech_job_trigger" class = 'font_middle_hide' href="javascript:tech_job_toggle('middle_tech_job_trigger');">
+								<p class='font_middle_hide'><u>Expand All</u></p>
+							</a>
+						</div>					
+					</div>
+			
+					{# Technical Experience Job Description #}
+					{% load rankProj_extras %}
+					<div class = 'div_tech_container_all'>
+						{% for techjob in TechJobs %}
+							<div class = 'div_tech_each_job_block'>
+								<div class ='div_tech_title_internal' value='{{ techjob.id }}'>
+									<div class = 'div_tech_left_title'><b><p class = 'font_tech_left_title'>{{ techjob.title }}</p></b></div>		
+									<div class = 'div_tech_left_company'><p class = 'font_tech_left_company'>{{ techjob.company }}</p></div>
+									<div class = 'div_tech_right_period'><p class = 'font_tech_right_period'>{{ techjob.period }}</p></div>
+								</div>
+								<div id = 'tech_job_{{ techjob.id }}' class = 'div_tech_left_detail' style='display: none'>
+									{% for detail in techjob.detail|split_content %}
+										<ul class = 'font_tech_left_detail'>
+											<li>{{ detail }}</li>
+										</ul>
+									{% endfor %}
+									<br>
+								</div>
+							</div>	
+						{% endfor %}
+					</div>
+			
+					{# Communication Experience #}
+					<div id = 'middle_title_container' class = 'div_middle_title_container'>
+						<div id = 'middle_title' class = 'div_middle_title'>
+							<p class = 'font_middle_title'> COMMUNICATION AND LEADERSHIP EXPERIENCE </p>
+						</div>
+
+						<div id = 'middle_comm_job_title' class = 'div_hide_all_option'>
+							<a id="comm_middle_comm_job_trigger" class = 'font_middle_hide' href="javascript:comm_job_toggle('middle_comm_job_trigger');">
+								<p class='font_middle_hide'><u>Expand All</u></p>
+							</a>
+						</div>									
+					</div>
+			
+					{# Communication Experience Job Description #}
+					<div class = 'div_tech_container_all'>
+						{% for commjob in CommJobs %}
+							<div class = 'div_tech_each_job_block'>
+								<div class ='div_tech_title_internal' value='{{ commjob.id }}'>
+									<div class = 'div_tech_left_title'><b><p class = 'font_tech_left_title'>{{ commjob.title }}</p></b></div>		
+									<div class = 'div_tech_left_company'><p class = 'font_tech_left_company'>{{ commjob.company }}</p></div>
+									<div class = 'div_tech_right_period'><p class = 'font_tech_right_period'>{{ commjob.period }}</p></div>
+								</div>
+								<div id = 'tech_job_{{ commjob.id }}' class = 'div_comm_left_detail' style='display: none'>
+									{% for detail in commjob.detail|split_content %}
+										<ul class = 'font_tech_left_detail'>
+											<li>{{ detail }}</li>
+										</ul>
+									{% endfor %}
+									<br>
+								</div>
+							</div>	
+						{% endfor %}
+					</div>
+			
+					{# Affiliation #}
+					<div id = 'middle_title_container' class = 'div_middle_title_container'>
+						<div id = 'middle_title' class = 'div_middle_title'>
+							<p class = 'font_middle_title'> AFFILIATIONS AND CERTIFICATIONS </p>
+						</div>					
+					</div>
+
+					{# Affiliation Container#}			
+					<div class = 'div_tech_container_all'>
+						
+						{% for aff in Affiliation%}
+							<div class = 'div_tech_each_job_block'>
+								<div class = 'div_aff_left_title'><b><p class = 'font_tech_left_company'>{{ aff.title }}</p></b></div>
+								<div class = 'div_tech_right_period'><p class = 'font_tech_right_period'>{{ aff.period }}</p></div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type='text/javascript' src="media/time_tracker_script.js"></script>
+		<script type='text/javascript' src="media/JQ_Lib/jquery.js"></script>
+		<script type='text/javascript' src="media/JQ_Lib/jquery-ui.js"></script>
+		<script type="text/javascript" src="media/resume_display_script.js"></script>
+		<script type='text/javascript' src="media/time_tracker_script.js"></script>
+		{% include "rankProj/footer.html" %}				
+	</body>
+</html>

@@ -1,0 +1,177 @@
+<html>
+	<head>
+		{% include "rankProj/top_display.html" %}
+		<link rel="stylesheet" type="text/css" href="media/show_proj_style.css" />
+	</head>
+	
+	<body>
+		<div id='porj_tmep_main_container' class = 'div_porj_tmep_main_container'>
+			{# Middle Container Starts Here #}
+			<div id = 'middle_container' class = 'div_middle_container'>
+
+				{# Space - used for spacing #}
+				<div id = 'top_buffer_container' class = 'div_top_buffer_container' >
+				</div>
+
+
+				{# Project Title + Authors #}
+				<div id = 'top_title_container' class = 'div_top_title_container' >	
+						<p class = 'font_middle_portfolio_publication_title'><b>{{ project.title }}</b></p>
+						<p class = 'font_middle_portfolio_publication_description'> {{ project.authors }}</p>
+				</div>
+
+				{% if project.video_url != 'none' %}
+					{# Video Youtube #}
+					<div id = 'middle_bigblock_container' class='div_middle_bigblock_container'>
+						<div id = 'middle_title_container' class = 'div_middle_title_container' >
+							<div id = 'middle_image_container' class = 'div_middle_image_container'>
+								<img width='60' height='60' src='media/Images/icon_video.jpg'>
+							</div>
+							<div id = 'middle_sectional_title' class = 'div_middle_sectional_title'>
+								<p class = 'font_middle_title'> Video Demonstration</p>
+							</div>	
+							{% if project.PDF != 'none' %}
+								<div id = 'pdf_download_container' class='div_pdf_download_container'>
+									<a href = "media/Images/{{project.PDF}}">
+										<img width='50' height='50' src='media/Images/icon_pdf.jpg'>
+									</a>
+								</div>
+							{% endif %}
+						</div>
+						<div id = 'display_main_container' class = 'div_display_main_container'>
+							<iframe width="720" height="450" src="{{ project.video_url }}" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+						</div>						
+					</div>
+				{% endif %}
+				
+				
+				{# Motivation Section #}
+				{% load rankProj_extras %}
+				<div id = 'middle_bigblock_container' class='div_middle_bigblock_container'>
+					<div id = 'middle_title_container' class = 'div_middle_title_container' >
+						<div id = 'middle_image_container' class = 'div_middle_image_container'>
+							<img width='60' height='60' src='media/Images/icon_motivation.jpg'>
+						</div>
+						<div id = 'middle_sectional_title' class = 'div_middle_sectional_title'>
+							<p class = 'font_middle_title'> Motivation</p>
+						</div>	
+					</div>
+					
+					<div id = 'display_main_container' class='div_display_main_container'>
+						
+						{# Motivation Content #}												
+						<div id = 'left_text_container' class='div_left_text_container'>
+							{% for content in project.motivation_content|split_content %}
+									<p class='font_middle_portfolio_publication_description'> {{ content }} </p><br>
+							{% endfor %}						
+						</div>
+						
+						{# Motivation Images #}						
+						{% for image in project.motivation_image|split_img %}
+							<div id = 'right_img_container' class='div_right_img_container'>
+								<img width='280' height='200' src='media/{{ image }}'>
+							</div>						
+						{% endfor %}						
+					</div>
+				</div>
+
+				{# Feature Section #}
+				<div id = 'middle_bigblock_container' class='div_middle_bigblock_container'>
+					<div id = 'middle_title_container' class = 'div_middle_title_container' >
+						<div id = 'middle_image_container' class = 'div_middle_image_container'>
+							<img width='60' height='60' src='media/Images/icon_feature.jpg'>
+						</div>
+						<div id = 'middle_sectional_title' class = 'div_middle_sectional_title'>
+							<p class = 'font_middle_title'> Features</p>
+						</div>	
+					</div>
+					
+					<div id = 'display_main_container' class='div_display_main_container'>
+						<div id = 'right_text_container' class='div_all_text_container'>
+							{% for feature in featurelist %}
+							
+								{# Feature Display Option 0 - Text Only #}
+								{% if feature.display_choice == 0 %}
+									<p class='font_middle_portfolio_publication_description'> {{ feature.feature_content }}</p>
+								{% endif %}
+								
+								{# Feature Display Option 1 - 1Text + Title#}
+								{% if feature.display_choice == 1 %}
+									<div id = 'div_sectional_title_container' class='div_sectional_title_container'>
+										<p class='font_sectional_title'><b> {{ feature.feature_title }}</b></p>
+									</div>
+									<p class='font_middle_portfolio_publication_description'> {{ feature.feature_content }}</p>
+								{% endif %}
+								
+								{# Feature Display Option 2 - x Text + x Images #}
+								{% if feature.display_choice == 2 %}
+									<div id = 'div_sectional_title_container' class='div_sectional_title_container'>
+										<p class='font_sectional_title'><b> {{ feature.feature_title }}</b></p>
+									</div>
+									
+									<div id= 'display_main_container' class='div_display_main_container'>
+										
+										<div id= 'left_sectional_text_container' class='div_left_sectional_text_container'>
+											{% for content in feature.feature_content|split_content %}
+												<p class='font_middle_portfolio_publication_description'> {{ content }}</p><br>
+											{% endfor %}
+										</div>
+										
+										{% for image in feature.feature_image|split_img %}
+											<div id = 'right_img_container' class='div_right_img_container'>
+												<img width='280' height='200' src='media/{{ image }}'>
+											</div>
+										{% endfor %}
+									</div>
+								{% endif %}
+
+								{# Feature Display Option 3 - 1Text + Text + Images #}
+								{% if feature.display_choice == 3 %}
+									<div id = 'div_sectional_title_container' class='div_sectional_title_container'>
+										<p class='font_sectional_title'><b> {{ feature.feature_title }}</b></p>
+									</div>
+									
+									<div id= 'display_main_container' class='div_display_main_container'>
+										
+											{% for content in feature.feature_content|split_content %}
+												{% if forloop.counter == 1%}
+													<p class='font_middle_portfolio_publication_description'> {{ content }}</p><br>
+												{% else %}
+													<div id= 'display_main_container' class='div_display_main_container'>
+														<div id= 'left_sectional_text_container' class='div_left_sectional_text_container'>
+															<p class='font_middle_portfolio_publication_description'> {{ content }}</p>
+														</div>
+													{% for image in feature.feature_image|split_img %}
+														<div id = 'right_img_container' class='div_right_img_container'>
+															<img width='280' height='200' src='media/{{ image }}'>
+														</div>
+													{% endfor %}
+													</div>	
+												{% endif %}
+											{% endfor %}
+									</div>
+								{% endif %}								
+								
+								{# Feature Display Option 4 - Images * 2 (Display two images side by side )#}
+								{% if feature.display_choice == 4 %}
+									<div id= 'display_main_container' class='div_display_main_container'>										
+										{% for image in feature.feature_image|split_img %}
+										<div id = 'right_img_container' class='div_right_img_container' style="margin-left: 15px">
+											<img width='280' height='200' src='media/{{ image }}'>
+										</div>
+										{% endfor %}
+									</div>
+								{% endif %}								
+								
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+			{% include "rankProj/footer.html" %}
+			<script type='text/javascript' src="media/JQ_Lib/jquery.js"></script>
+			<script type='text/javascript' src="media/JQ_Lib/jquery-ui.js"></script>
+			<script type='text/javascript' src="media/time_tracker_script.js"></script>
+			
+	</body>
+</html>
