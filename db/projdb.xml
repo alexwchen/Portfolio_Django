@@ -1,0 +1,372 @@
+<project>
+	<p_title>FPGA Lego Pinball Machine </p_title>
+	<authors>Alexander Chen, Alex Hsiao. ECE243 Computer Organization, University of Toronto. </authors>
+	<date>2010-04-01</date>
+	<vid_url><iframe width="720" height="450" src="http://www.youtube.com/embed/MpPNHwXBnaE" frameborder="0" allowfullscreen="allowfullscreen"></iframe></vid_url>
+	<pdf>none</pdf>
+	<vote_up>0</vote_up>
+	<vote_down>0</vote_down>
+	<proj_type>HCI</proj_type>
+	<tags>Altera, FPGA, Assembly, LEGO</tags>
+	<p_content>
+	During my 2nd year of undergraduate at the University of Toronto, I decided to built a Lego Pinball Machine for my <b>Computer Organization Course</b>. Since I was a kid, I have always been a fan of Lego blocks. This is my first Lego project integrating electronic sensors to create an interactive machine.
+
+
+
+
+</p_content>
+	<p_img>/Images/lego_motivation.jpg</p_img>
+	<id>1</id>
+	<feature>
+		<title>intro</title>
+		<f_content>
+This project used Altera DE2 as the processor and various other units to pass input/output between the processor and the sensors. Light sensors are used to count scores and Motors are used to perform user's actions. The software portion of the project is done in assembly code.
+
+
+
+
+		</f_content>
+		<f_img>none</f_img>
+		<f_display_choice>0</f_display_choice>
+	</feature>
+	<feature>
+		<title>Motors</title>
+		<f_content>
+There is a total of 3 motors being used in this project. 1 motor for the pinball launcher, the other 2 motors for the flippers. All motors will be triggered when user type in the corresponding character on the keyboard.
+
+When the key is pressed, an interrupt signal is raised in the code so the code will jump into the interrupt handler and execute the expected action. After the corresponding action is executed, the code will continue execute the code where it left off before the interrupt.
+
+
+
+
+		</f_content>
+		<f_img>/Images/fpga_lego_feature_1.jpg</f_img>
+		<f_display_choice>0</f_display_choice>
+	</feature>
+	<feature>
+		<title>Light Sensors</title>
+		<f_content>
+There is a total of 4 light sensors used in this project. 2 under the skeleton symbol on the top of the pinball machine. and 1 on each side close to the tunnel. The software use an infinite loop looping through all the sensor values. Since there is only 4 light sensors, the processor is able to loop through all of them fast enough without missing any read of score increments.
+
+
+
+
+		</f_content>
+		<f_img>/Images/fpga_lego_feature_2.jpg</f_img>
+		<f_display_choice>0</f_display_choice>
+	</feature>
+	<feature>
+		<title>PS2 Keyboard</title>
+		<f_content>
+The keyboard served as the input device for the user. Once the corresponding key is pressed. An interrupt signal is raise in the code, and motors will be executed to perform corresponding action.
+
+
+
+
+		</f_content>
+		<f_img>/Images/fpga_lego_feature_3.jpg</f_img>
+		<f_display_choice>0</f_display_choice>
+	</feature>
+<project>
+	<p_title>Puppy's Best Friend (Robot)</p_title>
+	<authors>Alexander Chen.</authors>
+	<date>2011-04-01</date>
+	<vid_url><iframe width="720" height="450" src="http://www.youtube.com/embed/1mNX7OVlNtM" frameborder="0" allowfullscreen="allowfullscreen"></iframe></vid_url>
+	<pdf>none</pdf>
+	<vote_up>0</vote_up>
+	<vote_down>0</vote_down>
+	<proj_type>HCI</proj_type>
+	<tags>Arduino, Remote Control, Puppy, Robot, Car</tags>
+	<p_content>
+	Meijing is a little puppy, I have spent a lot of time with him through out his childhood. However, every time I go out I feel really guilty leaving him at home and be bored. Therefore, instead of buying another dog and create a huge mess, I decided to make him a robot (A-bot) that will have interaction with him while we were not around. 
+
+
+</p_content>
+	<p_img>/Images/puppy_robot_motivation.jpg</p_img>
+	<id>2</id>
+	<feature>
+		<title>intro</title>
+		<f_content>
+This project used Arduino to control motors via h-bridge motor controller. To control the robot, the user can send signal to Arduino via serial, iPhone, Bluetooth or infrared devices.
+
+
+
+
+		</f_content>
+		<f_img>none</f_img>
+		<f_display_choice>0</f_display_choice>
+	</feature>
+	<feature>
+		<title>H-bridge Motor Controller</title>
+		<f_content>
+H-bridge takes in PWM signal from Arduino, and uses the strength of this signal to determine how much current it should use to spin the motor. The stronger the signal, the faster the motor spins. 
+
+
+
+
+		</f_content>
+		<f_img>none</f_img>
+		<f_display_choice>0</f_display_choice>
+	</feature>
+	<feature>
+		<title>User Input & Output</title>
+		<f_content>
+The A-bot can take user input like a remote control car via infrared, Bluetooth, WIFI. Remote controller such as my infrared key chain, iPhone become really handy device if I want to remote control the car wirelessly. When the input is signaled, Arduino micro-controller will interpret the signal and perform the corresponding action.
+
+
+		</f_content>
+		<f_img>/Images/puppy_robot_feature_2.jpg</f_img>
+		<f_display_choice>0</f_display_choice>
+	</feature>
+	<feature>
+		<title>Interaction & Future Development</title>
+		<f_content>
+As you can see in the video, the A-bot had some wonderful times with Meijing. After Meijing get familiar with the robot, he decided he want to bite it and see what the robot taste like. Therefore, the next state is definitely design a robot that can take 'bites' from a puppy.  Moreover, with a camera on top of the robot, we can potentially integrate some machine learning algorithm and create more interesting interaction. However, Meijing is not currently with me, I really miss him and I will maybe continue the work if I see him again. 
+
+
+
+
+		</f_content>
+		<f_img>/Images/puppy_robot_feature_3.jpg</f_img>
+		<f_display_choice>0</f_display_choice>
+	</feature>
+<project>
+	<p_title>Programmable LED Skateboard.</p_title>
+	<authors>Alexander Chen, Harrison Chen.</authors>
+	<date>2010-09-01</date>
+	<vid_url><iframe width="720" height="450" src="http://www.youtube.com/embed/095CPMuuJ10" frameborder="0" allowfullscreen="allowfullscreen"></iframe></vid_url>
+	<pdf>none</pdf>
+	<vote_up>0</vote_up>
+	<vote_down>0</vote_down>
+	<proj_type>HCI</proj_type>
+	<tags>LED, Arduino, Safety, Fashion</tags>
+	<p_content>
+	The programmable LED skateboard is my first project not related to any courses. I have learned so much knowledge in practical electronics and prototyping work flow throughout the process. It made me understand the true meaning of engineering and how joyful life could be if you absolutely love what you do. I realized building technology that changes people's life and make people happy is what I want to do for the rest of my life. 
+
+
+
+
+</p_content>
+	<p_img>/Images/ledskateboard_motivation.jpg</p_img>
+	<id>3</id>
+	<feature>
+		<title>intro</title>
+		<f_content>
+This project allows users to design their personal light show by programming Arduino mini. All lights installed on the skateboard are controlled by Arduino mini via digital pins. Limited PWM signal can be used to control the intensity of lights.
+
+
+
+
+		</f_content>
+		<f_img>none</f_img>
+		<f_display_choice>0</f_display_choice>
+	</feature>
+	<feature>
+		<title>Light Installation</title>
+		<f_content>
+To build a solid add-on for the skateboard, I put together 14 transistors and LED lights along with an Arduino mini on the bottom of my skateboard. Each transistor acts as a switch for each LED lights. In order to make sure the lights and wires are well protected, after the board is well soldered, I seal the entire PCB with glue gun. This will not only enhance the life span of the wires, but will also provide reasonable water proof functionality.
+
+
+
+
+		</f_content>
+		<f_img>/Images/ledskateboard_feature_1.jpg</f_img>
+		<f_display_choice>0</f_display_choice>
+	</feature>
+	<feature>
+		<title>Programmable Processor</title>
+		<f_content>
+Arduino mini is used to be the central controlling unit of the whole system. It can be load custom made light show algorithm created by the user and perform it in a loop. Also, the processor can also take input from external sources such as infrared, Bluetooth to perform remote controlled light show. 
+
+
+
+
+		</f_content>
+		<f_img>/Images/ledskateboard_feature_2.jpg</f_img>
+		<f_display_choice>0</f_display_choice>
+	</feature>
+	<feature>
+		<title>Battery Life & Installation</title>
+		<f_content>
+In my first prototype, I used 4 AA batteries to charge up all the lights and micro-controller. The batteries can last about two hours, which is satisfactory. However, the main problem comes from the heavy weight of 4 AA batteries. In the second prototype, we switched the AA batteries with lithium ion battery along with a on board rechargeable system. This solution significantly decrease the weight and make the skateboard experience much better.
+
+
+
+
+		</f_content>
+		<f_img>none</f_img>
+		<f_display_choice>0</f_display_choice>
+	</feature>
+	<feature>
+		<title>Wireless Control</title>
+		<f_content>
+Wireless control is one of the most desirable feature the users want. With wireless control via infrared or Bluetooth, users can change express themselves by changing the pattern of the light show. 
+
+
+
+
+		</f_content>
+		<f_img>none</f_img>
+		<f_display_choice>0</f_display_choice>
+	</feature>
+	<feature>
+		<title>Night Skateboarding & Safety</title>
+		<f_content>
+Besides how cool you can be with all the lights under your feet, these lights can also keep you away from tragic car accidents at night. Due to the low visibility at night, it is very hard for car drivers to see skateboarders if they are skateboarding on the streets. With these lights shining in interesting pattern designed by the user, it will be hard for any car passed by without noticing you.
+
+
+
+
+		</f_content>
+		<f_img>/Images/ledskateboard_feature_3.jpg</f_img>
+		<f_display_choice>0</f_display_choice>
+	</feature>
+<project>
+	<p_title>Japanese Medical talking glove</p_title>
+	<authors>Alexander Chen, Harrison Chen.</authors>
+	<date>2011-02-01</date>
+	<vid_url><iframe width="720" height="450" src="http://www.youtube.com/embed/6UP1eFSPfOw" frameborder="0" allowfullscreen="allowfullscreen"></iframe></vid_url>
+	<pdf>none</pdf>
+	<vote_up>0</vote_up>
+	<vote_down>0</vote_down>
+	<proj_type>HCI</proj_type>
+	<tags>Assistive Technology, Japanese, Photo Resistor, Audio & Visual Feedback, Arduino, Processing</tags>
+	<p_content>
+	While I was in high school, one of my close relatives had an unfortunate stroke. After a series of emergency rescue, her life was saved but the stroke left her body paralyzed and also took away her ability to talk. The only part of her body she have some control with, is her right hand.  
+
+During the years, I have always imagine myself in her shoes. It must be a very difficult mental challenge to not be able to express ones feelings for such a long time. I was helpless and lack of a solution until one day in my ECE516 lecture taught by Prof. Steve Mann. In class, Prof. Mann was talking about a single handed keying device used for performing music and typing English characters. It was then I thought, if my relative can have such a device enable her to type out her feelings, her world will never be the same. It was the first time in my life that I actually can use my engineering skills to help others and make a difference in their lives. It was absolutely amazing.
+
+
+
+
+</p_content>
+	<p_img>/Images/jp_talk_motivation.jpg</p_img>
+	<id>4</id>
+	<feature>
+		<title>intro</title>
+		<f_content>
+This project used photo resistors as the input sensor. Arduino Mega is used to collect input data from the sensors and send corresponding signal the computer. The computer collects signal sent by Arduino and display corresponding audio and video feedback to the user.
+
+
+
+
+		</f_content>
+		<f_img>none</f_img>
+		<f_display_choice>0</f_display_choice>
+	</feature>
+	<feature>
+		<title>Photo Resistors</title>
+		<f_content>
+Photo resistor is a variable resistor that will change its resistance according to the light intensity in the environment. This project takes advantage of such property to perform key selection for the user. Users are expected to block the light source from the photo resistor by touching the sensor. This action will be interpreted as a key trigger by Arduino processor loaded with our algorithm.
+
+Due to our target user's physical constraints, photo resistors are chosen over regular press button. The photo resistor not only provides a nice touch experience for the user, but also proofed to be a more robust sensor. It won't detach or lose its bounce like regular press button would over time.  
+
+
+
+
+		</f_content>
+		<f_img>/Images/jp_talk_feature_1.jpg</f_img>
+		<f_display_choice>0</f_display_choice>
+	</feature>
+	<feature>
+		<title>Audio & Visual Feedback</title>
+		<f_content>
+After Arduino Mega processor figure out what key were pressed, it will send the corresponding signal the computer. The algorithm from the computer will collect the signal sent by Arduino and perform audio and visual feedback.
+
+The computer performs audio feedback by playing the sound of the corresponding character input by the user. This instant feedback provides a friendly alert to the user what key has been pressed. Visual feedback are performed by simply printing out the Japanese character input by the user.
+
+
+
+
+		</f_content>
+		<f_img>/Images/jp_talk_feature_2.jpg</f_img>
+		<f_display_choice>0</f_display_choice>
+	</feature>
+	<feature>
+		<title>Japanese Character Structure</title>
+		<f_content>
+Without knowing much Japanese, I spent sometimes with my grandfather and figured out there is about 80 Japanese character that are used more frequently in daily conversations. In order to avoid installing 80 light resistors on a signal gloves, I structured all these characters with a certain pattern that only requires 15 light resistors.
+
+This particular pattern of input mechanism not only saves a lot of space on the glove, but also very easy to remember since it matches the Japanese language structure perfectly.
+
+
+
+
+		</f_content>
+		<f_img>/Images/jp_talk_feature_4.jpg</f_img>
+		<f_display_choice>0</f_display_choice>
+	</feature>
+	<feature>
+		<title>Portable Photo Resistors</title>
+		<f_content>
+Since the target user does not live in Canada, it was not easy for me to get all the medical information I need to design the glove. Information such as hand size, finger mobility etc. is important information I don't have access to. After making the first prototype with fixed sensor position, I found out that the user is not able to reach certain keys with her finger.
+
+Therefore, in my second prototype, I designed movable sensors which will not only allow you to move them around when you need to, but also stay still after you decided the perfect position for all your characters.
+
+
+
+
+		</f_content>
+		<f_img>/Images/jp_talk_feature_3.jpg</f_img>
+		<f_display_choice>0</f_display_choice>
+	</feature>
+<project>
+	<p_title>Real Time Brainwave Clustering & Recognition</p_title>
+	<authors>Alexander Chen, Jason Huang, Raymond Lo</authors>
+	<date>2011-08-01</date>
+	<vid_url><iframe width="720" height="450" src="http://www.youtube.com/embed/8UlY7_mUlb0" frameborder="0" allowfullscreen="allowfullscreen"></iframe></vid_url>
+	<pdf>none</pdf>
+	<vote_up>0</vote_up>
+	<vote_down>0</vote_down>
+	<proj_type>ML, HCI</proj_type>
+	<tags>Brainwave, NeuroSky, Real Time, K-means, Naive Bayes, CUDA, GPU</tags>
+	<p_content>
+	Note:This project was done prior taking any course in machine learning.
+
+One of my many dreams as a kid was to have super power like those heroic cartoon characters on TV. In particular, I have always wanted to move things simply by 'thinking about it'. For example, I want to turn off the lights just by think about it, get food from the fridge to my table just by thinking about it. 
+
+When Prof. Mann introduced to me the Neurosky EEG chip, my dream have come true. After hacking around around with the chip, we were able to perform mind control on RC cars, lights and interactive games. The experience is wonderful. With most of these projects, we basically use the value of concentration and meditation as our main control variable.
+
+In order to do more, we need to extract more information from our own brainwave. We need reliable signal that are unique and easy to control with. If you can find such signal, then we can do more complicated mind control on more objects. With this thought in mind, I walked in the world of machine learning and never stop learning it ever since.
+
+
+</p_content>
+	<p_img>/Images/brainwave_motivation_1.jpg /Images/brainwave_motivation_2.jpg</p_img>
+	<id>5</id>
+	<feature>
+		<title>intro</title>
+		<f_content>
+This project uses Neurosky EEG chip to process my own brainwave in real time. We built the essential electronics and software to communicate with EEG chip ourselves and then I implemented machine learning algorithm hoping to find new stable signal to enable us more control in future EEG applications. To make this application real time, the whole project is written in C along with OpenCV and CUDA library.
+
+
+
+
+		</f_content>
+		<f_img>none</f_img>
+		<f_display_choice>0</f_display_choice>
+	</feature>
+	<feature>
+		<title>Parsing Real Time EEG Data</title>
+		<f_content>
+By putting one electrode on the forehead and one electrode on each ear, we can sucessfully read stable brainwave signal via EEG chip. We use Arduino to take in these sensors values and interpret it according NeuroSky API on a standard computer. We applied all sorts of signal processing and transformation method, and I used them as feature hopping to do machine learning algorithm to extract more information out of it.
+
+
+
+
+		</f_content>
+		<f_img>/Images/brainwave_feature_1.jpg</f_img>
+		<f_display_choice>0</f_display_choice>
+	</feature>
+	<feature>
+		<title>Unsupervised Learning: K-mean Clustering</title>
+		<f_content>
+K-mean algorithm is an unsupervised learning algorithm that can look at all the features in the data set and hard assign all data in k different groups base on how close they are to each other in n-dimensional space. This algorithm is not probabilistic therefore can run sufficiently fast in real time application.  
+
+
+
+
+		</f_content>
+		<f_img>/Images/puppy_robot_feature_3.jpg</f_img>
+		<f_display_choice>0</f_display_choice>
+	</feature>
+</project>
