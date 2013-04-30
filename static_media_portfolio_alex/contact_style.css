@@ -1,0 +1,115 @@
+
+
+/*
+ * Contact Main Container
+ */
+.div_contact_main_container
+{
+	margin-left:auto;
+	margin-bottom:auto;
+	margin-right:auto;
+	margin-top:5px;
+	width:800px;
+	background-color:white;
+}
+
+.div_middle_main
+{
+	width:100%;
+	background-color:white;
+	overflow:hidden;	
+}
+
+.div_blank_divider
+{
+	width:280px;
+	overflow:hidden;	
+	height:20px;
+	/*border: 1px solid #C0C0C0;*/
+}
+
+
+/*
+ * Picture Frame
+ */
+
+.div_picture_small_frame
+{
+	padding: 5px;
+	border-style: solid;
+	border-color:silver;
+	border-width: 1px;
+	float: left;
+	margin:3px;
+}
+
+.div_picture_big_frame
+{
+	width:240px;
+	/*border: 1px solid #C0C0C0;*/
+	margin-left:10px;
+	margin-top:10px;
+	float:left;
+}
+
+/*
+ * Basic Contact Info
+ */
+
+.div_basic_big_frame
+{
+	width:480px;
+	/*border: 1px solid #C0C0C0;*/
+	margin-left:10px;
+	float:right;
+	margin-top:10px;
+}
+
+.div_basic_title_frame
+{
+	width:100%;
+	border-bottom: 1px solid #C0C0C0;
+	margin-top:1px;
+}
+
+.font_basic_title
+{
+	margin:auto;
+	text-align: left;
+	font-size:21px;
+	line-height: 150%;
+	font-family: Arial;	
+	display:inline;
+	color:#2F6AB3;			
+}
+
+.div_basic_info_desc_frame
+{
+	width:100%;
+	/*border: 1px solid #C0C0C0;*/
+	margin-top:15px;
+}
+
+.font_basic_info_desc
+{
+	margin:auto;
+	text-align: left;
+	font-size:17px;
+	line-height: 150%;
+	font-family: "Arial";	
+	display:inline;
+	color:#454545;			
+}
+
+.font_basic_research_desc
+{
+	margin:auto;
+	text-align: justify;
+	font-size:16px;
+	line-height: 150%;
+	font-family: "Arial";	
+	display:inline;
+	color:#454545;			
+}
+
+

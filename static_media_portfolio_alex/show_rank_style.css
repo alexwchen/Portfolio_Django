@@ -1,0 +1,212 @@
+
+
+/*
+ * Portfolio Main Container
+ */
+/*################################*/
+.div_portfolio_main_container
+{
+	margin-left:auto;
+	margin-bottom:auto;
+	margin-right:auto;
+	margin-top:5px;
+	width:800px;
+	background-color:white;
+}
+/*################################*/
+
+
+/*
+ * Portfolio Filter Container
+ */
+/*################################*/
+.div_portfolio_filter_main_container
+{
+	width:100%;
+	border-bottom: 1px solid #C0C0C0;
+	/*border: 1px solid #C0C0C0;*/
+	overflow:hidden;
+	
+}
+
+.div_select_drapdown_container
+{
+	float:right;
+	margin-bottom:10px;	
+	/*border: 1px solid blue;*/
+	
+}
+
+.font_filter_title
+{
+	color: gray;
+	margin-top:4px;
+	margin-bottom:5px;
+	margin-left:15px;
+	margin-right:4px;
+	text-align:left;
+	font-size:13px;	
+}
+
+/*################################*/
+
+/*
+ * Portfolio Tabs
+ */
+.div_portfolio_tabs_frame
+{
+	width:100%;
+}
+
+
+
+/*
+ * Portfolio Rank Big Frame
+ */
+/*################################*/
+.div_portfolio_rank_frame
+{
+	width:100%;
+	height:135;
+	/*margin-top:10px;*/
+	margin-top:auto;
+	margin-bottom:auto;	
+	cursor:pointer;
+	border-bottom: 1px solid #C0C0C0;
+}
+
+/*
+ * Portfolio Rank Color Change
+ */
+.div_portfolio_color_rank_frame{
+	width:67%;
+	height:100%;	
+	float:right;
+	/*border: 1px solid purple;*/
+}
+/*################################*/
+
+
+/*
+ * Portfolio Rank Frame Right
+ */
+/*################################*/
+.div_portfolio_project_title
+{
+	width:93%;
+	float:left;
+	/*border: 1px solid red;*/
+	text-align:left;
+}
+
+.div_portfolio_project_description
+{
+	width:93%;
+	float:left;
+	/*border: 1px solid green;*/
+}
+
+.font_portfolio_project_title
+{
+	color: #2F6AB3;
+	font-size:18px;	
+	margin-top:5px;
+	margin-right:0px;
+	margin-left:0px;	
+	margin-bottom:5px;
+}
+
+.font_portfolio_project_description
+{
+	color: gray;
+	margin-top:5px;
+	text-align:left;
+	font-size:13px;	
+}
+
+/*################################*/
+
+
+/*
+ * Portfolio Left Frame Left
+ */
+/*################################*/
+.div_portfolio_left_rank_frame
+{
+	width:7%;
+	height:96%;
+	float:left;
+	/*border: 1px solid blue;*/
+}
+
+/*
+ * Portfolio Rank Number
+ */
+.div_portfolio_rank_number
+{
+	width:100%;
+	height:40%;
+/*	border: 1px solid red;*/
+}
+
+.div_portfolio_rank_number_spacing_frame
+{
+	width:100%;
+	height:30%;	
+	overflow:hidden;
+/*	border: 1px solid blue;*/
+}
+
+.font_portfolio_rank_number
+{
+	text-align:center;
+	margin-top:7px;
+	margin-bottom:3px;
+	font-size:30px;
+}
+
+/*
+ * Portfolio Photo Display
+ */
+.div_portfolio_project_photo_display
+{
+	width:25%;
+	float:left;
+	/*border: 1px solid green;*/
+}
+
+.img_display_size
+{
+	width:168px;
+	height:127px;
+	margin:3px;
+/*	border: 5px solid #2F6AB3;*/
+}
+/*################################*/
+
+.div_portfolio_like_frame
+{
+	width:6%;
+	height:100%;	
+	float:right;	
+	/*border: 1px solid black;*/
+}
+
+.div_portfolio_like_space_frame
+{
+	width:6%;
+	height:65%;	
+	float:right;	
+	/*border: 1px solid blue;*/
+}
+.img_arrow_display_size
+{
+	width:30px;
+	height:30px;
+	margin-top:0px;
+	margin-bottom:0px;
+	cursor:pointer;
+	/*border: 1px solid #2F6AB3;*/
+}
+
+

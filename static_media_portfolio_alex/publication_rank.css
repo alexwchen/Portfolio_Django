@@ -1,0 +1,193 @@
+
+
+/*
+ * Portfolio Main Container
+ */
+.div_portfolio_main_container
+{
+	margin-left:auto;
+	margin-bottom:auto;
+	margin-right:auto;
+	margin-top:5px;
+	width:800px;
+	background-color:white;
+}
+
+/*
+ * Portfolio Tabs
+ */
+
+.div_portfolio_tabs_frame
+{
+	width:100%;
+}
+
+
+.div_portfolio_rank_frame
+{
+	width:100%;
+	height:100px;
+	margin-top:10px;
+	border-bottom: 1px solid #C0C0C0;
+	
+}
+
+.div_portfolio_color_rank_frame{
+	width:100%;
+	height:60%;	
+	float:right;
+	/*border: 1px solid purple;*/
+	cursor:pointer;	
+}
+
+.div_portfolio_rank_number
+{
+	width:7%;
+	height:70%;
+	float:left;
+	/*border: 1px solid blue;*/
+	line-height: 0;
+	text-align:center;
+	font-size:30px;
+}
+
+.div_portfolio_project_title
+{
+	width:72%;
+	height:50%;
+	float:left;
+	/*border: 1px solid red;*/
+	text-align:left;
+	line-height: 0%;
+	font-size:15px;	
+}
+
+.div_portfolio_project_finish_date
+{
+	width:20%;
+	height:40%;
+	float:right;
+	/*border: 1px solid yellow;*/
+	text-align:right;
+	line-height: 0%;
+	font-size:15px;	
+}
+
+.div_portfolio_project_tags
+{
+	width:92%;
+	height:40%;
+	float:left;
+	/*border: 1px solid green;*/
+	text-align:left;
+	line-height: 0%;
+	font-size:13px;	
+}
+
+.div_portfolio_project_photo_display
+{
+	width:100%;
+	height:30%;
+	float:right;
+	/*border: 1px solid green;*/
+	text-align:left;
+}
+
+.div_portfolio_project_single_photo
+{
+	width: 30px;
+	height:100%;
+	margin-left:5px;
+	float:right;
+	border: 1px solid blue;
+	text-align:left;
+}
+
+.font_portfolio_project_title
+{
+	color: #2F6AB3;
+}
+
+.font_portfolio_project_date
+{
+	color: black;
+}
+
+.font_portfolio_project_tags
+{
+	color: gray;
+}
+
+
+/*
+ * Portfolio Publications
+ */
+
+.div_portfolio_pub_color_rank_frame{
+	width:100%;
+	height:90%;	
+	float:right;
+	/*border: 1px solid purple;*/
+	cursor:pointer;	
+}
+
+
+.div_portfolio_pub_rank_number
+{
+	width:7%;
+	height:100%;
+	float:left;
+	/*border: 1px solid blue;*/
+	line-height: 0;
+	text-align:center;
+	font-size:30px;
+}
+
+.font_middle_portfolio_publication_title
+{
+	margin:auto;
+	text-align: left;
+	font-size:17px;
+	line-height: 150%;
+	font-family: Arial;	
+	display:inline;
+	color:#2F6AB3;			
+}
+
+.font_middle_portfolio_publication_description
+{
+	margin:auto;
+	text-align: left;
+	font-size:14px;
+	line-height: 150%;
+	font-family: "Arial";	
+	display:inline;
+	color:#454545;			
+}
+
+.font_middle_portfolio_publication_link
+{
+	font-size:14px;
+	line-height: 150%;
+	font-family: "Arial";	
+	display:inline;
+	color:#2F6AB3;			
+}
+
+/*
+ * Portfolio Filter Container
+ */
+.div_portfolio_filter_main_container
+{
+	width:100%;
+	overflow:hidden;
+	border-bottom: 1px solid #C0C0C0;
+	
+	
+}
+
+.div_select_drapdown_container
+{
+	float:right;
+	margin-bottom:10px;	
+}

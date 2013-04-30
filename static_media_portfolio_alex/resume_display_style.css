@@ -1,0 +1,318 @@
+/****
+***	Structures Middle
+****/
+.middle_body
+{
+	margin:auto;
+	width:800px;
+	background-color:white;
+}
+
+.font_middle_title
+{
+	margin:auto;
+	text-align: left;
+	font-size:21px;
+	line-height: 250%;
+	font-family: "Arial";	
+	color:#2F6AB3;			
+}
+
+.font_middle_hide
+{
+	margin:auto;
+	text-align: right;
+	font-size:15px;
+	line-height: 100%;
+	font-family: "Arial";	
+	color:#2F6AB3;			
+}
+
+.div_middle_container
+{
+	margin:auto;
+	width:90%;
+	background-color:white;
+	margin-bottom:0px;
+}
+
+/*
+**	Middle Title Education/Tech Etc.
+*/
+.div_middle_title_container
+{
+	
+	width:100%;
+	height:50px;
+	margin-top: 5px;
+	border-bottom: 1px solid silver;
+}
+
+.div_middle_title
+{
+	
+	width:80%;
+	height:50px;
+	float: left;
+	/*border: 1px solid red;*/
+}
+
+.div_hide_option
+{
+	width:50px;
+	height:20px;
+	margin-top:20px;
+	float:right;
+	/*border: 1px solid silver;*/
+}
+
+.div_hide_all_option
+{
+	width:80px;
+	height:20px;
+	margin-top:20px;
+	text-align:right;
+	float:right;
+	/*border: 1px solid silver;*/
+}
+
+/*
+**	Middle Content Education Only
+*/
+
+.font_edu_left_title
+{
+	font-family:"Arial";
+	font-size:17px;
+	margin:auto;
+	text-align: left;
+	line-height: 150%;
+	color:black;			
+}
+
+.font_edu_left_university_title
+{
+	font-family:"Arial";
+	font-size:15px;
+	line-height: 20%;
+	color:black;			
+}
+
+.font_edu_left_university_detail
+{
+	font-family:"Arial";
+	font-size:15px;
+	line-height: 10%;
+	color:black;			
+}
+
+.font_edu_left_program
+{
+	font-family:"Arial";
+	font-size:15px;
+	margin:auto;
+	text-align: left;
+	line-height: 150%;
+	color:black;			
+}
+
+
+
+.font_middle_content_right
+{
+	margin:auto;
+	text-align: right;
+	font-size:15px;
+	line-height: 150%;
+	font-family: "Arial";	
+	color:black;			
+}
+
+.div_middle_content_container
+{
+	width:100%;
+	height:45px;
+	margin-top:18px;
+	cursor:pointer;
+	/*border:1px solid silver;*/
+}
+
+.div_middle_content_container_left
+{
+	width:80%;
+	float:left;
+	line-height: 150%;
+	/*border:1px solid silver;*/
+}
+
+.div_middle_content_container_right
+{
+	width:14%;
+	float:right;
+	line-height: 150%;
+	/*border:1px solid silver;*/
+}
+		
+/*
+*	Hide / Expand Blocks
+*/
+.div_education_detail
+{
+	width:100%;	
+}
+
+/*
+**	Tech Experience 
+*/
+
+.div_tech_container_all
+{
+	width:100%;
+	height:auto;
+	margin-top: 15px;
+	/*border: 1px solid purple;*/
+	background-color:white;
+}
+
+.div_tech_each_job_block
+{
+	width:100%;
+	margin-top: 15px;
+	overflow:hidden;
+	border-bottom: 1px solid silver;
+}
+
+.div_tech_title_internal
+{
+	width:100%;
+	cursor:pointer;	
+	overflow:hidden;
+	cursor:pointer;		
+}
+
+.div_tech_title_internal_comm
+{
+	width:100%;
+	cursor:pointer;	
+	overflow:hidden;
+	cursor:pointer;		
+}
+
+.div_tech_left_title
+{
+	width:86%;	
+	height:25px;
+	float:left;
+}
+
+.div_tech_aff_block
+{
+	width:100%;
+	margin-bottom: 15px;
+	border-bottom: 1px solid silver;
+	overflow:hidden;
+}
+
+.div_aff_left_title
+{
+	width:80%;
+	height:25px;	
+	float:left;
+	background-color:white;		
+}
+
+.div_tech_left_company
+{
+	width:80%;
+	height:25px;
+	float:left;
+}
+
+.div_tech_right_period
+{
+	width:20%;
+	height:25px;
+	float:right;
+}
+
+.div_tech_left_detail
+{
+	width:100%;
+	float:left;
+	margin-top:10px;
+	background-color:white;		
+}
+
+.font_tech_left_title
+{
+	font-family:"Arial";
+	font-size:17px;
+	margin:auto;
+	text-align: left;
+	line-height: 150%;
+	color:black;			
+}
+
+
+.font_tech_right_expand
+{
+	margin:auto;
+	text-align: right;
+	font-size:15px;
+	line-height: 100%;
+	font-family: "Arial";	
+	color:#2F6AB3;								
+}
+
+.font_tech_right_demo
+{
+	margin:auto;
+	text-align: right;
+	font-size:15px;
+	line-height: 100%;
+	font-family: "Arial";	
+	color:#2F6AB3;			
+}
+
+.font_tech_left_company
+{
+	font-family:"Arial";
+	font-size:15px;
+	margin:auto;
+	text-align: left;
+	line-height: 150%;
+	color:black;			
+}
+	
+.font_tech_right_period
+{
+	font-family:"Arial";
+	font-size:15px;
+	margin:auto;
+	text-align: right;
+	line-height: 150%;
+	color:black;			
+}
+
+.font_tech_left_detail
+{
+	font-family:"Arial";
+	font-size:15px;
+	margin:auto;
+	text-align: left;
+	line-height: 150%;
+	color:black;			
+}
+
+/*
+*	Comm Experience
+*/
+.div_comm_left_detail
+{
+	width:100%;
+	float:left;
+	margin-top:10px;
+	background-color:white;		
+}
+
+	
