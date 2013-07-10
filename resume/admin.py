@@ -1,4 +1,4 @@
-from resume.models import Education, Job, Affiliation, Images, Contact
+from resume.models import Education, Job, Affiliation, Images, Contact, Supervisor
 from django.contrib import admin
 
 class JobsAdmin(admin.ModelAdmin):
@@ -7,6 +7,8 @@ class JobsAdmin(admin.ModelAdmin):
     'job_type',
     'company',
     'period',
+    'start_date',
+    'end_date',
     'detail'
     ]
 
@@ -30,6 +32,10 @@ class ImageInline(admin.StackedInline):
     model=Images
     extra=0
 
+class SupervisorInline(admin.StackedInline):
+    model=Supervisor
+    extra=0
+
 class ContactAdmin(admin.ModelAdmin):
     fields= [
     'title_contact',
@@ -37,7 +43,7 @@ class ContactAdmin(admin.ModelAdmin):
     'title_research',
     'research_interest',
     ]
-    inlines = [ImageInline]
+    inlines = [ImageInline, SupervisorInline]
 
 admin.site.register(Job, JobsAdmin)
 ###############################################
@@ -47,4 +53,4 @@ admin.site.register(Job, JobsAdmin)
 
 #admin.site.register(Education, EducationAdmin)
 #admin.site.register(Affiliation, AffiliationAdmin)
-#admin.site.register(Contact, ContactAdmin)
+admin.site.register(Contact, ContactAdmin)
