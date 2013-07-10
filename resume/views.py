@@ -8,8 +8,8 @@ from django.conf import settings
 def resume_display(request):
     Edu =  Education.objects.all()
     Aff =  Affiliation.objects.all()
-    TechJobs =  sorted(Job.objects.filter(job_type = 'tech'), reverse=True)
-    CommJobs =  sorted(Job.objects.filter(job_type = 'comm'), reverse=True)
+    TechJobs =  Job.objects.filter(job_type = 'tech').order_by('end_date').reverse()
+    CommJobs =  Job.objects.filter(job_type = 'comm').order_by('end_date').reverse()
     FullPath = request.get_full_path()    
         
     return render_to_response(
