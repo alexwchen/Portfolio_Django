@@ -73,7 +73,6 @@ class Migration(SchemaMigration):
             ('position', self.gf('django.db.models.fields.CharField')(max_length=200)),
             ('university', self.gf('django.db.models.fields.CharField')(max_length=200)),
             ('famous_paper', self.gf('django.db.models.fields.CharField')(max_length=200)),
-            ('image_path', self.gf('django.db.models.fields.CharField')(max_length=200)),
             ('link', self.gf('django.db.models.fields.CharField')(max_length=200)),
             ('research_interest', self.gf('django.db.models.fields.TextField')(max_length=200)),
         ))
@@ -152,7 +151,6 @@ class Migration(SchemaMigration):
             'famous_paper': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
             'field': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'image_path': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
             'link': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
             'name': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
             'position': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
