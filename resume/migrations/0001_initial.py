@@ -73,10 +73,35 @@ class Migration(SchemaMigration):
             ('position', self.gf('django.db.models.fields.CharField')(max_length=200)),
             ('university', self.gf('django.db.models.fields.CharField')(max_length=200)),
             ('famous_paper', self.gf('django.db.models.fields.CharField')(max_length=200)),
+            ('image_path', self.gf('django.db.models.fields.CharField')(max_length=200)),
             ('link', self.gf('django.db.models.fields.CharField')(max_length=200)),
             ('research_interest', self.gf('django.db.models.fields.TextField')(max_length=200)),
         ))
         db.send_create_signal(u'resume', ['Supervisor'])
+
+        # Adding model 'Supervisor_Affiliation'
+        db.create_table(u'resume_supervisor_affiliation', (
+            (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
+            ('supervisor', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['resume.Supervisor'])),
+            ('title', self.gf('django.db.models.fields.CharField')(default='none', max_length=200)),
+        ))
+        db.send_create_signal(u'resume', ['Supervisor_Affiliation'])
+
+        # Adding model 'Supervisor_Department'
+        db.create_table(u'resume_supervisor_department', (
+            (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
+            ('supervisor', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['resume.Supervisor'])),
+            ('title', self.gf('django.db.models.fields.CharField')(default='none', max_length=200)),
+        ))
+        db.send_create_signal(u'resume', ['Supervisor_Department'])
+
+        # Adding model 'Supervisor_Famous_paper'
+        db.create_table(u'resume_supervisor_famous_paper', (
+            (u'id', self.gf('django.db.models.fields.AutoField')(primary_key=True)),
+            ('supervisor', self.gf('django.db.models.fields.related.ForeignKey')(to=orm['resume.Supervisor'])),
+            ('title', self.gf('django.db.models.fields.CharField')(default='none', max_length=200)),
+        ))
+        db.send_create_signal(u'resume', ['Supervisor_Famous_paper'])
 
 
     def backwards(self, orm):
@@ -97,6 +122,15 @@ class Migration(SchemaMigration):
 
         # Deleting model 'Supervisor'
         db.delete_table(u'resume_supervisor')
+
+        # Deleting model 'Supervisor_Affiliation'
+        db.delete_table(u'resume_supervisor_affiliation')
+
+        # Deleting model 'Supervisor_Department'
+        db.delete_table(u'resume_supervisor_department')
+
+        # Deleting model 'Supervisor_Famous_paper'
+        db.delete_table(u'resume_supervisor_famous_paper')
 
 
     models = {
@@ -151,12 +185,31 @@ class Migration(SchemaMigration):
             'famous_paper': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
             'field': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
             u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
+            'image_path': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
             'link': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
             'name': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
             'position': ('django.db.models.fields.CharField', [], {'max_length': '200'}),
             'research_interest': ('django.db.models.fields.TextField', [], {'max_length': '200'}),
             'start_date': ('django.db.models.fields.DateField', [], {}),
             'university': ('django.db.models.fields.CharField', [], {'max_length': '200'})
+        },
+        u'resume.supervisor_affiliation': {
+            'Meta': {'object_name': 'Supervisor_Affiliation'},
+            u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
+            'supervisor': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['resume.Supervisor']"}),
+            'title': ('django.db.models.fields.CharField', [], {'default': "'none'", 'max_length': '200'})
+        },
+        u'resume.supervisor_department': {
+            'Meta': {'object_name': 'Supervisor_Department'},
+            u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
+            'supervisor': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['resume.Supervisor']"}),
+            'title': ('django.db.models.fields.CharField', [], {'default': "'none'", 'max_length': '200'})
+        },
+        u'resume.supervisor_famous_paper': {
+            'Meta': {'object_name': 'Supervisor_Famous_paper'},
+            u'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
+            'supervisor': ('django.db.models.fields.related.ForeignKey', [], {'to': u"orm['resume.Supervisor']"}),
+            'title': ('django.db.models.fields.CharField', [], {'default': "'none'", 'max_length': '200'})
         }
     }
 

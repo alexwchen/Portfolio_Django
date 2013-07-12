@@ -10,17 +10,15 @@
 				<ul>
 					<li><a href = "#CONT">CONTACT</a></li>		
 				</ul>
-
+				
 				<div id="CONT">
+					
+					<!-- personal contact -->
 					<div id='middle_main' class='div_middle_main'>						
-						<div id ='picture_big_frame' class='div_picture_big_frame'>							
-							{% for picture in Images %}
-								<div id='picture' class='div_picture_small_frame'>
-									<a href = '/portfolio/{{ picture.link }}'>
-										<img width='100' height='100' src='media{{ picture.image_name }}'>
-									</a>
-								</div>
-							{% endfor %}
+						<div id ='picture_big_frame' class='div_picture_big_frame'>
+							<div id='picture' class='div_picture_small_frame'>
+								<img width='200' height='200' src='/media/Images/contact_profile_pic.jpg'>
+							</div>
 						</div>
 						
 						<div id ='basic_big_frame' class='div_basic_big_frame'>
@@ -28,7 +26,7 @@
 								<p class = 'font_basic_title'> {{ Contact.title_contact }}</p>
 							</div>
 							<div id = 'basic_info_desc_frame' class='div_basic_info_desc_frame'>
-								<p class = 'font_basic_info_desc'>{{ Contact.email}}</p>
+								<p class = 'font_basic_info_desc'>{{ Contact.email}}</p>								
 							</div>							
 						</div>
 						
@@ -41,10 +39,97 @@
 							<div id = 'basic_info_desc_frame' class='div_basic_info_desc_frame'>
 								<p class = 'font_basic_research_desc'>{{ Contact.research_interest }}</p>
 							</div>							
+						</div>	
+					</div>
+					
+					<!-- line between profile and past prof(supervisors) -->
+					<div class='past_supervisor_title_container'>
+						<p class="supervisor_title_text" id="past_supervisors_title"> Past Supervisors </p>
+					</div>
+					
+					
+					<!-- supervisors -->
+					{% for detail in Supervisor_detail %}
+						<div class="dotted_line_under_each_supervisor"> 
+							<div class='div_supervisor_big_box'>
+								<div id ='picture_big_frame' class='div_supervisor_picture_big_frame'>
+									<div id='picture' class='div_picture_small_frame'>
+										<a href= {{detail.supervisor.link}}>
+											<img width='180' height='180' src= '/media/{{detail.supervisor.image_path}}' >
+										</a>
+									</div>
+									<br>
+									<p class = 'supervisor_font'> {{ detail.supervisor.email}} </p>
+									<br>
+									<div class='supervisor_link_email_frame'> 
+										<p class = 'supervisor_font'>
+											<a href= {{detail.supervisor.link}}> {{ detail.supervisor.link}} </a>
+										</p>
+									</div>
+									{% for tags in detail.research_interest %}
+									<div class='tag_opac'>
+										<p class = 'tag_font'>{{ tags }} </p><br>
+									</div>
+									{% endfor %}
+									
+									
+								</div>
+								
+								<div class='div_basic_big_frame'>
+									<div id ='basic_title_frame' class='div_basic_title_frame'>
+										<p class = 'font_basic_title'> {{ detail.supervisor.name }}</p>
+									</div>
+									
+									<div id = 'basic_info_desc_frame' class='div_basic_info_desc_frame'>
+										<div class="position_and_university_title"> 
+											 {{ detail.supervisor.position}}, {{ detail.supervisor.university }}
+										</div>
+										
+										<p class = 'supervisor_font'>
+											<!-- <ul> -->
+											{% for depart in detail.department %}
+												<!-- <li class='list_font'>  -->
+													{{ depart }} 
+													<!-- </li> -->
+											{% endfor %}
+											<!-- </ul> -->
+										</p>
+										<br>
+										<p class = 'supervisor_font'> 
+											<!-- <ul> -->
+											{% for affili in detail.affiliation %}
+												<!-- <li class='list_font'> -->
+													 {{ affili }} 
+													<!-- </li> -->
+											{% endfor %}
+											<!-- </ul> -->
+										</p>
+										
+										<div class="div_collaborate_frame">
+											<p class = 'supervisor_font'>Collaborated with me:</p>
+											<p class = 'supervisor_collaborate_start-end_date'>{{ detail.supervisor.start_date }} - {{ detail.supervisor.end_date }}</p>
+										</div>
+										<p class = 'supervisor_font'>Selected publications: </p>
+											<br>
+											{% for famous in detail.famous_paper %}
+												<div class = 'div_famous_paper_organize'>
+													<p class = 'p_famous_paper_organize'> <b> {{ famous.title }} </b></p>
+													<p class = 'p_famous_paper_organize_small'> {{ famous.author }}, {{ famous.conference }} </p>
+												</div>
+											{% endfor %}
+									</div>
+								</div>
+								<div id='blank_divider' class='div_blank_divider'></div>
+							</div>
 						</div>
 						
-					</div>
+					{% endfor %}
 				</div>
+				
+				
+				
+				
+				
 
 
 			</div>			

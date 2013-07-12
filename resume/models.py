@@ -1,5 +1,9 @@
 from django.db import models
 
+##################################
+# Resume Content Models
+##################################
+
 class Education (models.Model):
     title = models.CharField(max_length=200)
     degree = models.CharField(max_length=200)
@@ -14,10 +18,7 @@ class Education (models.Model):
 class Job(models.Model): 
     title = models.CharField(max_length=200)
     company = models.CharField(max_length=200)
-    
-    # this should be deleted later
     period = models.CharField(max_length=200)
-
     start_date = models.DateField()
     end_date = models.DateField()
     detail = models.TextField()
@@ -33,6 +34,9 @@ class Affiliation(models.Model):
     def __unicode__(self):
         return self.title
 
+##################################
+# Contact & Supervisor Content Model
+##################################
         
 class Contact(models.Model): 
     title_contact = models.CharField(max_length=200)
@@ -43,16 +47,7 @@ class Contact(models.Model):
     def __unicode__(self):
         return self.title_contact
 
-# this should be deleted later
-class Images(models.Model): 
-    Contact = models.ForeignKey(Contact)
-    title = models.CharField(max_length=200)
-    image_name = models.CharField(max_length=200)
-    link = models.CharField(max_length=200)
-    
-    def __unicode__(self):
-        return self.title
-
+# supervisor related model starts here
 class Supervisor(models.Model): 
     contact = models.ForeignKey(Contact)
     name = models.CharField(max_length=200)
@@ -69,3 +64,23 @@ class Supervisor(models.Model):
 
     def __unicode__(self):
         return self.name
+
+class Supervisor_Affiliation(models.Model):
+    supervisor = models.ForeignKey(Supervisor)
+    title = models.CharField(max_length=200, default="none")
+    def __unicode__(self):
+        return self.title
+
+class Supervisor_Department(models.Model):
+    supervisor = models.ForeignKey(Supervisor)
+    title = models.CharField(max_length=200, default="none")
+    def __unicode__(self):
+        return self.title
+
+class Supervisor_Famous_paper(models.Model):
+    supervisor = models.ForeignKey(Supervisor)
+    title = models.CharField(max_length=200, default="none")
+    author = models.CharField(max_length=200, default="none")
+    conference = models.CharField(max_length=200, default="none")
+    def __unicode__(self):
+        return self.title

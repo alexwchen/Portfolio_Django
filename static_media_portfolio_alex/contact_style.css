@@ -17,7 +17,7 @@
 {
 	width:100%;
 	background-color:white;
-	overflow:hidden;	
+	overflow:hidden;		
 }
 
 .div_blank_divider
@@ -59,10 +59,10 @@
 .div_basic_big_frame
 {
 	width:480px;
-	/*border: 1px solid #C0C0C0;*/
 	margin-left:10px;
 	float:right;
 	margin-top:10px;
+/*	border: 1px solid #C0C0C0;*/
 }
 
 .div_basic_title_frame
@@ -86,7 +86,7 @@
 .div_basic_info_desc_frame
 {
 	width:100%;
-	/*border: 1px solid #C0C0C0;*/
+/*	border: 1px solid #C0C0C0;*/
 	margin-top:15px;
 }
 
@@ -113,3 +113,130 @@
 }
 
 
+/*
+	Supervisor CSS
+*/
+
+
+.past_supervisor_title_container
+{
+	font-size:30px;
+	width:725px;
+	margin-left:14px;
+	margin-top:20px;
+	border-bottom: 4px solid #C0C0C0;	
+}
+.supervisor_title_text
+{
+	margin:auto;
+	font-size:25px;	
+	font-family: "Arial";	
+	text-align: left;
+	line-height: 200%;
+	display:inline;
+	color:#2F6AB3;				
+}
+
+.div_supervisor_big_box
+{
+	width:100%;
+	background-color:white;
+	overflow:hidden;	
+	border-bottom: 1px solid #C0C0C0;		
+}
+
+.div_supervisor_picture_big_frame
+{
+	width:200px;
+	margin-left:31px;
+	margin-top:39px;
+	margin-bottom:10px;
+	float:left;	
+	/*border: 1px solid #C0C0C0;*/
+}
+
+.supervisor_font
+{
+	margin:auto;
+	text-align: justify;
+	font-size:16px;
+	line-height: 150%;
+	font-family: "Arial";	
+	display:inline;
+	color:#454545;
+	/*border: 1px solid #C0C0C0;*/			
+}
+
+.supervisor_collaborate_start-end_date
+{
+	font-size:16px;
+	margin:auto;
+	text-align: left;
+	line-height: 150%;
+	font-family: Arial;	
+	display:inline;
+	color:#2F6AB3;
+}
+
+.div_collaborate_frame
+{
+	margin-top:7px;
+	margin-bottom:7px;
+}
+
+.position_and_university_title
+{
+/*	border: 1px solid red;*/
+	margin-bottom:7px;
+	text-align: justify;
+	font-family: "Arial";	
+	color:#454545;
+	font-size:20px;
+}
+.supervisor_link_email_frame
+{
+/*	border: 1px solid red;*/
+	width:200px;
+	word-wrap: break-word;
+	margin-bottom:15px;
+}
+
+.div_famous_paper_organize
+{
+/*	border-bottom:1px solid #454545;*/
+	text-align: justify;
+	font-size:16px;
+	margin-top:10px;
+	margin-bottom:15px;
+	margin-left:20px;
+	font-family: "Arial";	
+	color:#454545;
+}
+
+.p_famous_paper_organize
+{
+	color:#2F6AB3;
+	margin:0px;
+	line-height:100%;
+}
+
+.p_famous_paper_organize_small
+{
+	color:#454545;
+	margin:0px;
+	font-size:15px;
+}
+
+.tag_font
+{
+	margin:auto;
+	text-align: justify;
+	font-size:16px;
+	line-height: 150%;
+	font-family: "Arial";	
+	display:inline;
+	color:#454545;
+	border-radius: 3px;
+	border: 2px solid lightblue;
+	background-color:lightblue;			
+}
