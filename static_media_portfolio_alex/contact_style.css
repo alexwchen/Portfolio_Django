@@ -117,7 +117,7 @@
 	Supervisor CSS
 */
 
-
+/***past supervisor title***/
 .past_supervisor_title_container
 {
 	font-size:30px;
@@ -136,15 +136,20 @@
 	display:inline;
 	color:#2F6AB3;				
 }
+/**************************/
 
+/***The outter box for supervisor***/
 .div_supervisor_big_box
 {
+/*	border:1px solid red;*/
 	width:100%;
 	background-color:white;
 	overflow:hidden;	
 	border-bottom: 1px solid #C0C0C0;		
 }
+/***********************************/
 
+/***Supervisor's picture outter box***/
 .div_supervisor_picture_big_frame
 {
 	width:200px;
@@ -154,7 +159,9 @@
 	float:left;	
 	/*border: 1px solid #C0C0C0;*/
 }
+/*************************************/
 
+/***General font setting for supervisor***/
 .supervisor_font
 {
 	margin:auto;
@@ -165,6 +172,14 @@
 	display:inline;
 	color:#454545;
 	/*border: 1px solid #C0C0C0;*/			
+}
+/******************************************/
+
+/***collaborate with me and date***/
+.div_collaborate_frame
+{
+	margin-top:7px;
+	margin-bottom:7px;
 }
 
 .supervisor_collaborate_start-end_date
@@ -177,13 +192,9 @@
 	display:inline;
 	color:#2F6AB3;
 }
+/*********************************/
 
-.div_collaborate_frame
-{
-	margin-top:7px;
-	margin-bottom:7px;
-}
-
+/***position and university***/
 .position_and_university_title
 {
 /*	border: 1px solid red;*/
@@ -193,6 +204,9 @@
 	color:#454545;
 	font-size:20px;
 }
+/*****************************/
+
+/***supervisor's email and link***/
 .supervisor_link_email_frame
 {
 /*	border: 1px solid red;*/
@@ -200,7 +214,10 @@
 	word-wrap: break-word;
 	margin-bottom:15px;
 }
+/*********************************/
 
+
+/***Famous paper organization***/
 .div_famous_paper_organize
 {
 /*	border-bottom:1px solid #454545;*/
@@ -226,7 +243,9 @@
 	margin:0px;
 	font-size:15px;
 }
+/******************************/
 
+/***Past sipervisor's recernt interest tag***/
 .tag_font
 {
 	margin:auto;
@@ -240,3 +259,4 @@
 	border: 2px solid lightblue;
 	background-color:lightblue;			
 }
+/*******************************************/

@@ -50,7 +50,7 @@
 					
 					<!-- supervisors -->
 					{% for detail in Supervisor_detail %}
-						<div class="dotted_line_under_each_supervisor"> 
+						<!-- <div class="dotted_line_under_each_supervisor">  -->
 							<div class='div_supervisor_big_box'>
 								<div id ='picture_big_frame' class='div_supervisor_picture_big_frame'>
 									<div id='picture' class='div_picture_small_frame'>
@@ -86,23 +86,15 @@
 										</div>
 										
 										<p class = 'supervisor_font'>
-											<!-- <ul> -->
 											{% for depart in detail.department %}
-												<!-- <li class='list_font'>  -->
-													{{ depart }} 
-													<!-- </li> -->
+												{{ depart }} 
 											{% endfor %}
-											<!-- </ul> -->
 										</p>
 										<br>
 										<p class = 'supervisor_font'> 
-											<!-- <ul> -->
 											{% for affili in detail.affiliation %}
-												<!-- <li class='list_font'> -->
-													 {{ affili }} 
-													<!-- </li> -->
+												{{ affili }} 
 											{% endfor %}
-											<!-- </ul> -->
 										</p>
 										
 										<div class="div_collaborate_frame">
@@ -121,8 +113,7 @@
 								</div>
 								<div id='blank_divider' class='div_blank_divider'></div>
 							</div>
-						</div>
-						
+						<!-- </div> -->
 					{% endfor %}
 				</div>
 				
