@@ -80,7 +80,7 @@ class ContactAdmin(admin.ModelAdmin):
 ###############################################
 
 #admin.site.register(Education, EducationAdmin)
-#admin.site.register(Affiliation, AffiliationAdmin)
+admin.site.register(Affiliation, AffiliationAdmin)
 admin.site.register(Supervisor,SupervisorAdmin)
 admin.site.register(Job, JobsAdmin)
 admin.site.register(Contact, ContactAdmin)
