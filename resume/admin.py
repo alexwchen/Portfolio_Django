@@ -51,7 +51,7 @@ class SupervisorAdmin(admin.ModelAdmin):
     fieldsets=[
     ('Personal Info', {'fields':['name', 'email', 'position', 'university']}),
     ('Meta Info', {'fields':['contact', 'start_date', 'end_date', 'image_path', 'link']}),
-    ('Tag Info', {'fields':['field', 'famous_paper', 'research_interest']}),
+    ('Tag Info', {'fields':['field', 'research_interest']}),
     ]
 
     inlines = [Supervisor_AffiliationInline,Supervisor_DepartmentInline,Supervisor_Famous_paperInline]

@@ -57,7 +57,6 @@ class Supervisor(models.Model):
     field = models.CharField(max_length=200)
     position = models.CharField(max_length=200)
     university = models.CharField(max_length=200)
-    famous_paper= models.CharField(max_length=200)
     image_path = models.CharField(max_length=200)
     link = models.CharField(max_length=200)
     research_interest = models.TextField(max_length=200)
